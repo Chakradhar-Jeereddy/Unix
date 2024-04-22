@@ -1,0 +1,97 @@
+CPU Concepts
+
+CPU memory topology
+    a) Symmetric Multi-Process - SMP
+         One large memory space that processes can allocate memory.
+         Adv - Consistent performance accross all memory spaces as its coming from same physical memory
+         disv - Memory can't scale
+    b) Numa - Non-Uniform memory access (NUMA)
+        Sections of physical memory are controlled by one or many process called numa nodes.
+        Allows for larger amounts of memory in the system.
+        Need to watch for foreign memory access.
+        Process needs to use the system bus to access memory from another section/numa of physcial memory
+        Numa reduces contention on the bus as memory is broken up into sections and process favours to access its own memory.
+        OS is NUMA aware, resouces allocated from same node if condition permits.
+    c) Scheduler - It schedule a task called thread
+                   Thread is unit of work need to get done.
+                   Schedular takes that unit of work and keeps that into a queue to access CPU
+                   In case of many CPUs, each CPU will have its own queue.
+
+How thinks gets scheduled on to the CPU?
+It is not first come first serve.
+It follows polices, the default is sched_other/sched_normal
+  Time sharing scheduling (thread will get access to CPU for a fixed amount of time, when time runsout, thread goes back to the queue)
+  This will happen over and over again to the life time of the thread and it eventually gets completed.
+  Threads also wait for external resources like reading and writing disks.
+  There will be many queues per processes, queues can be priorotized
+
+Queues priority
+      - Preemptive
+      - Dynamic priority list
+      - Based on niceness
+      - NUMA Aware
+   - Schedular always looks for high priority queues
+Process state 
+  - Running
+  - Runnable (Ready to go onto the CPU)
+  - Sleeping (waiting for external resorources)
+
+Run queues - Length of the scheduling queues
+             If the process are in run queue for CPU and they are runnable. Then process is waiting for CPU, application is waiting and end users are waiting.
+Load avarage - Length of the run queue
+
+To monitor load average use - top,w
+
+CPU spikes aren't bad for a short time, it means the CPU was used.
+But if the spike sustains, we need to look into it.
+Do a baselines to know whats normal.
+Spikes aren't bad
+Long waits
+User
+I/O
+System
+
+
+Monitoring 
+Investigating system CPU topology
+Isolating a CPU hog
+Monitoring CPU load average
+Monitoring for exessive waits
+
+Tools
+- lscpu
+
+Test case 1
+Run load on CPU
+cat /dev/random > /dev/null  (repetedly read a number after random number generator and throw it out at /dev/null)
+Now run top
+Look for - 
+Load average - 2.22 1.97 1.42
+               1min  5min 15min
+Average length of run queue of each cpu, on an average there are 1.42 processes in run queue since last 15mins.
+wa - Waits on external thing
+hi - hardware interupts
+si - software interupts
+st - time stolen by hypervisor
+
+Test case 2
+
+dd if=/dd/zero  of=test1.img bs=1 count=100000
+
+if - input file (readout bunch of zeros)
+of - output file 
+bs - block size 1 byte
+oflag = sysnc (each I/O is synchronous, each i/o transactions should be flushed and ack to OS)
+
+
+
+
+
+
+  
+
+
+
+        
+
+ 
