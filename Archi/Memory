@@ -1,0 +1,43 @@
+Memory Architecture
+ - Physcial memory
+ - Virtual memory (process can't directly access physical memory, the use their own representaion of memory called virtual memory)
+                  (Virtual memory pages are mapped to physical memory)
+ - pages
+ - Swapping
+    .swap out
+      . Time (after the rention expires)
+      . Demand (Memory pressure)
+      . Page fault
+      . Swap in
+. Excessing Swapping
+. Swappiness - 
+
+What to look for?
+
+High consumers of space
+  - Physical
+  - Virtual
+Excessive swapping
+  - Swapping in/out
+File system cache (OS will allocate left over physical memory to cache frequently accessed files)
+
+Investigating system memory
+Isolating a memory hog
+cat /proc/meminfo 
+
+free (retuns in KBs)
+total  used  free shared  buff/cache   available
+741     467   68    1       205          112
+
+top 
+sort by memory
+f, select %m pres s and q
+s - set sort order
+
+VIRT (ALLOCATED FROM VIRTUAL MEMORY)
+RES (ALLOCATED FROM PHYSICAL MEMORY)
+
+
+
+  - 
+
