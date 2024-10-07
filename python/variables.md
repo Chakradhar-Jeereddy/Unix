@@ -5,3 +5,19 @@ print(name)
 length = len(name)
 print(length)
 ```
+
+#variable naming rules
+#A-Z, a-Z, 0-9, _
+#name cannot start with number
+#should have a meaning full name
+#can use camel case
+
+```
+age_ = 10
+age- = 10 -> #cannot use -
+1age = 20  -> # cannot start with numeric
+myAge=20
+var a = 'hello' # cannot declare datatype
+Roll_no = 40
+"age" = 60  #cannot use double quotes for variable
+```
