@@ -1,7 +1,7 @@
 #Love calculator
 #Score for "true love"
 #use functions lower(), count(),str()
-
+```
 m_name = input("enter your full name: ")
 l_name = input("enter your friend's name: ")
 
@@ -16,3 +16,4 @@ elif(int(percent)==40 and int(percent)==50):
     print(f"The match is {percent}%, you're all right together.")
 else:
     print(f"The match is {percent}%")
+```
