@@ -1,6 +1,6 @@
 # Tuples
-#Index starts from 0 and -1
-#Can have mixed data types and duplicates
+# Index starts from 0 and -1
+# Can have mixed data types and duplicates
 # comma is mandatory to define tuple
 # tuples are immutable
 # can apply len(),sort(),min(),max(),nested tuple
