@@ -88,3 +88,10 @@ print(score.count(-19))
 score.clear()
 print(score)
 ```
+# Nested list
+```
+l = [10,3,-2,[-4,20,33,10],9,10,1,56,9]
+print(len(l))  #It returns 9, the reference of nexted list is stored in memory
+print(l[3][:4]) #Slicing the nested list
+print(l[3][0])
+```
