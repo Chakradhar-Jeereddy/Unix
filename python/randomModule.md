@@ -40,7 +40,7 @@ names = input("Please enter all your names: ")
 list = names.split(" ")
 print(list)
 ```
-```
+
 # Writing same program using split function
 # Using split function on string we can create a list object
 ```
