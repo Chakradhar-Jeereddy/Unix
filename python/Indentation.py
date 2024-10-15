@@ -1,0 +1,3 @@
+- Indentation represents a block of code in python
+- Indentation is 4 tabs.
+- First line of the code should not have indentation
