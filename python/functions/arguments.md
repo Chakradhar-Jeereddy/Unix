@@ -43,10 +43,12 @@ Are you from ME deparment?
 Hi jenny
 Are you from CSS deparment?
 ```
-```
+
 ## Aribitrory/ variable length
+```
+- a) Aribitrory position argument
 - When we dont know how many arguments we should pass use * (the single * is used for positional arguements)
-- It will take the arguments as tuple.
+- It will take the arguments and returns tuple object.
 
 def add(a,b)
   c=a+b
@@ -65,7 +67,46 @@ def add(*numbers):
 
 add(1,1,1,1,1,1,1,1,1,)
 ```
+```
+- b) Keyword arbitrory argument
+- It takes two ** and input argument should be key:value pair
+- The function returns dict object
+def country(**name):
+    print(name)
 
+country(c1="India",c2="US",c3="UK")  => This will print dictionary argument
+output - {'c1': 'India', 'c2': 'US', 'c3': 'UK'}
+
+def country(**name):
+    print(name)
+    for key,value in name.items():
+        print(key,value)
+
+country(c1="India",c2="US",c3="UK")
+
+Output - 
+c1 India
+c2 US
+c3 UK
+```
+
+- Another case
+```
+- Always A P argument should be first parameter and then A K argument
+def info(*args,**kwargs):
+  for key,value in kwargs.items():
+     print(key,value)
+  print(args)
+info(1,2,name="da",age=30,dept="CSE")
+
+- Below code will error out
+def info(**kwargs,*args):  => Position arbitrory argument should come first
+  for key,value in kwargs.items():
+     print(key,value)
+  print(args)
+info(1,2,name="da",age=30,dept="CSE")
+
+```
 
 
 
