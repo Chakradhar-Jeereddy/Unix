@@ -47,7 +47,7 @@ Are you from CSS deparment?
 ## Aribitrory/ variable length
 - When we dont know how many arguments we should pass use * (the single * is used for positional arguements)
 - It will take the arguments as tuple.
-```
+
 def add(a,b)
   c=a+b
   print(f"sum is {c}")
