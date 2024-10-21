@@ -23,7 +23,8 @@ info.country = 'Canada'
 #print(info.name,info.lastname,info.country)
 
 # Constructor will tell what would happen when object is created, it will initialize to store attributes
-# To construct or initialize we use init mettod __init__, it is a predefined method and python knows what to do when it is defined
+# To construct or initialize we use init mettod __init__, it is a predefined method and python knows what to do
+# when it is defined
 
 class Info2:
     def __init__(self):
@@ -58,13 +59,16 @@ class Chakra:
 #def display(self):
 # This will accept subject name as string
     def display(self,subject_name):
-       print(f"hi, my name is {self.myname} and I teach {subject_name}.")   # no need to use self.subject_name, it is local parameter of function
+       print(f"hi, my name is {self.myname} and I teach {subject_name}.")   # no need to use self.subject_name, 
+       # it is local parameter of function
 #      print("Hi {self.myname}") #you need to use self.myname, because it is attribute and not variable.
 #      return 0
 
-chakra_object = Chakra('chakra','canada')  #passing arguments is mandatory, unless it is defined with default value
+chakra_object = Chakra('chakra','canada')  #passing arguments is mandatory, unless it is defined 
+# with default value
 #print(chakra_object.myname)
-#print(chakra_object.display())  # we get "hi chakra" and None, the None we get because there is no return statement in funtion
+#print(chakra_object.display())  # we get "hi chakra" and None, the None we get because there is no return 
+# statement in funtion
 #chakra_object.display()         # removed the print, now it returns only "Hi chakri"
 #chakra_object.display("python")
 ```
