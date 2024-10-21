@@ -8,6 +8,7 @@
 class ChiledClass(ParentClass):
     <Class defination>
 ```
+```
 class Human:
     def eat(self):
         print("I can eat")
