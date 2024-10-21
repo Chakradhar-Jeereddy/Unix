@@ -71,4 +71,22 @@ chakra_object = Chakra('chakra','canada')  #passing arguments is mandatory, unle
 # statement in funtion
 #chakra_object.display()         # removed the print, now it returns only "Hi chakri"
 #chakra_object.display("python")
+
+#Define class
+
+class Chakra:
+# Intitialize the class, what should happen when object is created.
+  def __init__(self,name,address):  #name, address accept string object
+      self.myname=name
+      self.address=address #the attribute name can be same or anything but parameter name should match.
+      self.follower=0
+  def display(self,subject_name): #subject_name accepts string object
+      print(f"Hi, I am {self.myname} I teach {subject_name}") #myname is attribute, it needs self, subject_name is variable
+  def follwers(self,follower):
+      self.follower+=1
+      print(self.follower)
+chakra_object=Chakra('chakra','canada')
+chakra_object.display('java')
+chakra_object.follwers("chakra")
+
 ```
