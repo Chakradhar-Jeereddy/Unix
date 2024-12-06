@@ -26,13 +26,13 @@ Roll_no = 40
 #Use input function to pass weight in kilograms with type int
 #height in meters in float type
 #calculare BMI = weight/height**2
-
+```
 weight = int(input("Enter you weight: "))
 height = float(input("Enter you height: "))
-BMI = weight/height**2)
+BMI = (weight/height**2)
 print(BMI)
 print(type(BMI))
 print(int(BMI))
-
+```
 
 
