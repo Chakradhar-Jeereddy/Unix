@@ -11,8 +11,9 @@
      3. Define variables (eg name=Imran)
      4. Commands (echo, cp,grep,etc)
      5. Statements (if, while, for etc.)
-  ```
-  Format like this
+
+```
+Format like this
 
 #!/bin/bash
 #Purpose: Testing script format
@@ -30,7 +31,3 @@ df -h
         echo "hello"
         fi
 ```
-
-
-
-
