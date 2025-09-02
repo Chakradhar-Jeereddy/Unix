@@ -39,18 +39,3 @@ echo
 echo $1 process is stoppped!!!
 echo
 ```
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             b              
