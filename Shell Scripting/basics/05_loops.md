@@ -19,6 +19,19 @@ echo "Welcome $i times"
 done
 ```
 
+```
+while [ $count -lt $num ]; do echo repeat $count times.; count=$(expr $count + 1); num=$(expr $num - 1); done; echo Script is completed
+repeat 0 times.
+repeat 1 times.
+repeat 2 times.
+repeat 3 times.
+repeat 4 times.
+Script is completed
+```
+
+```
+for i in 1 2 3 4; do echo $i; done
+```
 * While loop
 ```
 #!/bin/bash
